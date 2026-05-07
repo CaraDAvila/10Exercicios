@@ -2,7 +2,7 @@ package ex1.formas;
 
 import ex1.Ponto;
 
-public class Cilindro {
+public class Cilindro extends Forma implements Volume {
     double raio;
     double altura;
     Ponto ponto;
@@ -13,15 +13,17 @@ public class Cilindro {
         this.ponto = ponto;
     }
 
-    public double calcularArea(double area) {
+    public double calcularArea() {
+        double area;
         return area = 2 * Math.PI * raio * (raio + altura);
+
     }
 
-    public double calcularVolume(double volume) {
+    public double calcularVolume() {
+        double volume;
         return volume = Math.PI * Math.pow(raio, 2) * altura;
     }
 
-    @Override
     public String toString() {
         return "Cilindro{" +
                 "raio=" + raio +
@@ -59,4 +61,5 @@ public class Cilindro {
     public void setPonto(Ponto ponto) {
         this.ponto = ponto;
     }
+
 }

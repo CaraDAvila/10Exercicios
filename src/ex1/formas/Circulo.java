@@ -2,7 +2,7 @@ package ex1.formas;
 
 import ex1.Ponto;
 
-public class Circulo {
+public class Circulo extends Forma {
     private double raio;
     private Ponto ponto;
 
@@ -11,7 +11,8 @@ public class Circulo {
         this.ponto = ponto;
     }
 
-    public double calcularArea(double area) {
+    public double calcularArea() {
+        double area = 0;
         return area = Math.PI * Math.pow(raio, 2);
     }
 
@@ -38,4 +39,5 @@ public class Circulo {
     public void setPonto(Ponto ponto) {
         this.ponto = ponto;
     }
+
 }
